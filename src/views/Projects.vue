@@ -12,7 +12,7 @@
 		<section class="section">
 			<div class="container is-fluid">
 				<div class="columns is-multiline">
-						<div class="column is-one-third" v-for="project in projects" v-if="project.isPublished">
+						<div class="column is-one-third" v-for="project in projects">
 							<post-card v-bind="project"></post-card>
 						</div>				
 				</div>

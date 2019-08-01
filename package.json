@@ -15,7 +15,8 @@
     "bulma": "^0.7.5",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.3"
+    "vue-router": "^3.0.3",
+    "vue-simple-markdown": "^1.0.9"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",

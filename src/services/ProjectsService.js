@@ -14,8 +14,6 @@ const Axios = axios.create({
   baseURL: "https://api.airtable.com/v0/appBNGFU3NQ5tnUMT/Projects?maxRecords=3&view=Grid%20view"
 });
 
-console.log("airtable" + process.env.VUE_APP_AIRTABLEKEY)
-
 Axios.defaults.headers.common = {'Authorization': `Bearer ` + process.env.VUE_APP_AIRTABLEKEY || AIRTABLEKEY}
 
 export default{

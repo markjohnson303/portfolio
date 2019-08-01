@@ -4,51 +4,46 @@
 			<div class="hero-body">
 				<div class="container">
 					<h1 class="title is-2">
-						Hello, I'm Mark. I like to make things.
+						My Projects
 					</h1>
 				</div>
 			</div>
 		</section>
 		<section class="section">
-			<h2 class="title is-3 has-text-weight-merdium has-text-centered">
-				What I Have
+			<h2 class="title is-3 has-text-weight-medium has-text-centered">
+				What I Bring
 			</h2>
 			<div class="columns">
-				<div class="column">
-					<div class="box">
-						<h3 class="title is-4 has-text-weight-merdium">
+				<div class="column">					
+						<h3 class="title is-4 has-text-weight-medium">
 							Front End Focus
 						</h3>
 						<p>
 							Focused on building user interfaces with JS (Vue, Angular, ES6), HTML, and CSS (Sass) that are well designed and functional.
 						</p>
-					</div>
+
 				</div>
 				<div class="column">
-					<div class="box">
-						<h3 class="title is-4 has-text-weight-merdium">
+						<h3 class="title is-4 has-text-weight-medium">
 							Full Stack Experience
 						</h3>
 						<p>
 							Exposure working across the application stack using APIs, Node, Mongo, and Firebase and Heroku to deliver full production applications.
 						</p>
-					</div>
 				</div>
 				<div class="column">
-					<div class="box">
-						<h3 class="title is-4 has-text-weight-merdium">
+						<h3 class="title is-4 has-text-weight-medium">
 							Broad Business Exposure
 						</h3>
 						<p>
-							6 years of startup experience with direct involvemnet in user experience, marketing, service, and operations.
+							6 years of startup experience as a co-founder of Knotty Tie Co. I've managed and contributed to development, user experience, marketing, service, and operations.
 						</p>
-					</div>
 				</div>
 				
 			</div>
 			</section>
-			<section class="section">
-			<h2 class="title is-3 has-text-weight-merdium has-text-centered">
+			<section class="section has-background-light">
+			<h2 class="title is-3 has-text-weight-medium has-text-centered">
 				Where I Come From
 			</h2>
 			<div class="columns is-centered">
@@ -59,6 +54,73 @@
 				</div>
 			</div>
 		</section>
+		<section class="section">
+			<h2 class="title is-3 has-text-weight-medium has-text-centered">
+							Technologies I've Worked With
+						</h2>
+						<div class="columns">
+							<div class="column">
+								<div class="box">
+									<h3 class="title is-4 has-text-weight-medium">
+										Vue.JS
+									</h3>
+									<p>
+										Something short and sweet about Vue. A little More.
+									</p>
+								</div>
+							</div>
+							<div class="column">
+								<div class="box">
+									<h3 class="title is-4 has-text-weight-medium">
+										Vue.JS
+									</h3>
+									<p>
+										Something short and sweet about Vue. A little More.
+									</p>
+								</div>
+							</div>
+							<div class="column">
+								<div class="box">
+									<h3 class="title is-4 has-text-weight-medium">
+										Vue.JS
+									</h3>
+									<p>
+										Something short and sweet about Vue. A little More.
+									</p>
+								</div>
+							</div>
+							<div class="column">
+								<div class="box">
+									<h3 class="title is-4 has-text-weight-medium">
+										Vue.JS
+									</h3>
+									<p>
+										Something short and sweet about Vue. A little More.
+									</p>
+								</div>
+							</div>
+							<div class="column">
+								<div class="box">
+									<h3 class="title is-4 has-text-weight-medium">
+										Vue.JS
+									</h3>
+									<p>
+										Something short and sweet about Vue. A little More.
+									</p>
+								</div>
+							</div>
+							<div class="column">
+								<div class="box">
+									<h3 class="title is-4 has-text-weight-medium">
+										Vue.JS
+									</h3>
+									<p>
+										Something short and sweet about Vue. A little More.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
 	</div>
 </template>
 

@@ -11,7 +11,7 @@
 import axios from 'axios'
 
 const Axios = axios.create({
-  baseURL: "https://api.airtable.com/v0/appBNGFU3NQ5tnUMT/Projects?maxRecords=3&view=Grid%20view"
+  baseURL: "https://api.airtable.com/v0/appBNGFU3NQ5tnUMT/Projects?view=Most%20Recent%20Posts"
 });
 
 Axios.defaults.headers.common = {'Authorization': `Bearer ` + process.env.VUE_APP_AIRTABLEKEY || AIRTABLEKEY}

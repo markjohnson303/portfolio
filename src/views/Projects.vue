@@ -10,33 +10,14 @@
 			</div>
 		</section>
 		<section class="section">
-			<h2 class="title is-3 has-text-weight-medium has-text-centered">
-				What I Bring
-			</h2>
-			<div class="columns">
-					<div class="column" v-for="project in projects" v-if="project.isPublished">					
-						<post-card v-bind="project"></post-card>
-					</div>
-				<div class="column">
-						<h3 class="title is-4 has-text-weight-medium">
-							Full Stack Experience
-						</h3>
-						<p>
-							Exposure working across the application stack using APIs, Node, Mongo, and Firebase and Heroku to deliver full production applications.
-						</p>
+			<div class="container is-fluid">
+				<div class="columns is-multiline">
+						<div class="column is-one-third" v-for="project in projects" v-if="project.isPublished">
+							<post-card v-bind="project"></post-card>
+						</div>				
 				</div>
-				<div class="column">
-						<h3 class="title is-4 has-text-weight-medium">
-							Broad Business Exposure
-						</h3>
-						<p>
-							6 years of startup experience as a co-founder of Knotty Tie Co. I've managed and contributed to development, user experience, marketing, service, and operations.
-						</p>
-				</div>
-				
 			</div>
-			</section>
-
+		</section>
 	</div>
 </template>
 
@@ -78,15 +59,17 @@
 	 			let self = this
 	 			let projectList = []
 	 			for (var i = 0; i < self.airtableResponse.length; i++) {
-	 				let project = {
-	 					title: self.airtableResponse[i].fields.Title,
-	 					date: self.airtableResponse[i].fields["Date Published"],
-	 					isPublished: self.airtableResponse[i].fields.Published,
-	 					snippet: self.airtableResponse[i].fields.Excerpt,
-	 					image: self.airtableResponse[i].fields.Image[0].url,
-	 					slug: self.airtableResponse[i].fields.Slug
-	 				}
-	 				projectList.push(project)
+	 				if (self.airtableResponse[i].fields.Published){
+		 				let project = {
+		 					title: self.airtableResponse[i].fields.Title,
+		 					date: self.airtableResponse[i].fields["Date Published"],
+		 					isPublished: self.airtableResponse[i].fields.Published,
+		 					snippet: self.airtableResponse[i].fields.Excerpt,
+		 					image: self.airtableResponse[i].fields.Image[0].url,
+		 					slug: self.airtableResponse[i].fields.Slug
+		 				}
+		 				projectList.push(project)
+		 			}
 	 			}
 	 			return projectList
 	 		}

@@ -3,20 +3,19 @@
   	<div class="card">
   	  <div class="card-image">
   	    <figure class="image is-square">
-  	      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+  	      <img :src="image" alt="Placeholder image">
   	    </figure>
   	  </div>
   	  <div class="card-content">
   	    <div class="media">
   	      <div class="media-content">
-  	        <p class="title is-4">My Second Post</p>
-  	        <p class="subtitle is-6">January 15, 2013</p>
+  	        <p class="title is-4">{{title}}</p>
+  	        <p class="subtitle is-6">{{date}}</p>
   	      </div>
   	    </div>
 
   	    <div class="content">
-  	      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  	      Phasellus nec iaculis mauris.
+  	      {{snippet}}
   	    </div>
   	  </div>
   	</div>
@@ -27,7 +26,12 @@
 export default {
   name: "Postcard",
   props: {
-    msg: String
+    title: String,
+    date: String,
+    isPublished: Boolean,
+    snippet: String,
+    image: String,
+    slug: String
   }
 };
 </script>

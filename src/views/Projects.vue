@@ -14,10 +14,9 @@
 				What I Bring
 			</h2>
 			<div class="columns">
-				<div class="column">					
-					<post-card></post-card>
-
-				</div>
+					<div class="column" v-for="project in projects" v-if="project.isPublished">					
+						<post-card v-bind="project"></post-card>
+					</div>
 				<div class="column">
 						<h3 class="title is-4 has-text-weight-medium">
 							Full Stack Experience
@@ -53,18 +52,44 @@
 		components: {
 			PostCard
 		},
+		data() {
+			return{
+				airtableResponse: []
+			}
+		},
 		mounted: function () {
+			let self = this
 			console.log("here 1")
 			async function getProjects() {
 				try{
 			  		const response = await ProjectsService.getProjects()
 			  		console.log(response)
+			  		self.airtableResponse = response.data.records
+
 			  	}catch(err){
 			  		console.log(err)
 			  	}
 			  	}
 			  	getProjects()
 			  	
+	 	},
+	 	computed: {
+	 		projects(){
+	 			let self = this
+	 			let projectList = []
+	 			for (var i = 0; i < self.airtableResponse.length; i++) {
+	 				let project = {
+	 					title: self.airtableResponse[i].fields.Title,
+	 					date: self.airtableResponse[i].fields["Date Published"],
+	 					isPublished: self.airtableResponse[i].fields.Published,
+	 					snippet: self.airtableResponse[i].fields.Excerpt,
+	 					image: self.airtableResponse[i].fields.Image[0].url,
+	 					slug: self.airtableResponse[i].fields.Slug
+	 				}
+	 				projectList.push(project)
+	 			}
+	 			return projectList
+	 		}
 	 	}
 	};
 

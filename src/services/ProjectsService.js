@@ -5,6 +5,7 @@ const Axios = axios.create({
 });
 
 if(process.env.VUE_APP_AIRTABLEKEY){
+	console.log("running with vue env")
 	Axios.defaults.headers.common = {'Authorization': `Bearer ` + process.env.VUE_APP_AIRTABLEKEY}
 } else {
 	Axios.defaults.headers.common = {'Authorization': `Bearer ` + process.env.AIRTABLEKEY}

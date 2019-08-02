@@ -7,14 +7,14 @@
           <img src="./assets/name-mark.jpg" width="112" height="28">
         </router-link>
 
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" :class="{ 'is-active': showNav }" @click="showNav = !showNav">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
+      <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': showNav }">
         <div class="navbar-start">
 
         </div>
@@ -45,6 +45,17 @@
   </footer>
 </div>
 </template>
+
+<script>
+  export default {
+    name: "App",
+    data() {
+      return{
+        showNav: false
+      }
+    },
+  };
+</script>
 
 <style type="text/css">
 #app {

@@ -41,6 +41,7 @@
       <p>
         Built by Mark Johnson with Vue.js, Bulma, and Airtable.
       </p>
+      <p>Want to see how this site was built? <a href="https://dev.to/markjohnson303/building-a-portfolio-site-with-vue-bulma-and-airtable-5a58">Check out my tutorial on dev.to!</a></p>
     </div>
   </footer>
 </div>
@@ -63,7 +64,7 @@
   overflow: hidden;
   display: block;
   position: relative;
-  padding-bottom: 168px; /* height of your footer */
+  padding-bottom: 210px; /* height of your footer */
 }
 footer {
  position: absolute;

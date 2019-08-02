@@ -75,7 +75,7 @@ footer {
 <style lang="sass">
 
 
-$primary: #4c4c6e
+$primary: #72b5db
 
 .hero-home
   @extend .hero

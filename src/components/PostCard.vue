@@ -1,5 +1,6 @@
 <template>
 	<div class="post-card">
+		<router-link :to="'/project/'+slug">
 		<div class="card">
 			<div class="card-image">
 				<figure class="image is-square">
@@ -10,15 +11,15 @@
 				<div class="media">
 					<div class="media-content">
 						<p class="title is-4">{{title}}</p>
-						<p class="subtitle is-6">{{date}}</p>
 					</div>
 				</div>
 				<div class="content">
 					<p>{{snippet}}</p>
-					<router-link :to="'/project/'+slug" class="button is-fullwidth">View Project</router-link>
+					<button class="button is-fullwidth">View Project</button>
 				</div>
 			</div>
 		</div>
+		</router-link>
 	</div>
 </template>
 
@@ -34,3 +35,4 @@
 		}
 	};
 </script>
+

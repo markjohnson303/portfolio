@@ -1,13 +1,3 @@
-
-
-// api key keyAskbDof1VmSk0H
-
-// app id appBNGFU3NQ5tnUMT
-
-// const URL = 
-
-
-
 import axios from 'axios'
 
 const Axios = axios.create({

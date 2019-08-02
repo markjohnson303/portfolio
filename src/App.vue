@@ -29,7 +29,7 @@
           <router-link to="/projects" class="navbar-item">
            Projects
           </router-link>
-          <router-link to="/projects" class="navbar-item">
+          <router-link to="/contact" class="navbar-item">
            Contact
           </router-link>
        </div>
@@ -39,7 +39,7 @@
    <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        Built by Mark Johnson with Vue.js, Bulma, and Airtable. All rights reserved.
+        Built by Mark Johnson with Vue.js, Bulma, and Airtable.
       </p>
     </div>
   </footer>

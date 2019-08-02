@@ -43,37 +43,34 @@
 			console.log("here 1")
 			async function getProjects() {
 				try{
-			  		const response = await ProjectsService.getProjects()
-			  		console.log(response)
-			  		self.airtableResponse = response.data.records
+					const response = await ProjectsService.getProjects()
+					console.log(response)
+					self.airtableResponse = response.data.records
 
-			  	}catch(err){
-			  		console.log(err)
-			  	}
-			  	}
-			  	getProjects()
-			  	
-	 	},
-	 	computed: {
-	 		projects(){
-	 			let self = this
-	 			let projectList = []
-	 			for (var i = 0; i < self.airtableResponse.length; i++) {
-	 				if (self.airtableResponse[i].fields.Published){
-		 				let project = {
-		 					title: self.airtableResponse[i].fields.Title,
-		 					date: self.airtableResponse[i].fields["Date Published"],
-		 					isPublished: self.airtableResponse[i].fields.Published,
-		 					snippet: self.airtableResponse[i].fields.Excerpt,
-		 					image: self.airtableResponse[i].fields.Image[0].url,
-		 					slug: self.airtableResponse[i].fields.Slug
-		 				}
-		 				projectList.push(project)
-		 			}
-	 			}
-	 			return projectList
-	 		}
-	 	}
+				}catch(err){
+					console.log(err)
+				}
+			}
+			getProjects()		  	
+		},
+		computed: {
+			projects(){
+				let self = this
+				let projectList = []
+				for (var i = 0; i < self.airtableResponse.length; i++) {
+					if (self.airtableResponse[i].fields.Published){
+						let project = {
+							title: self.airtableResponse[i].fields.Title,
+							date: self.airtableResponse[i].fields["Date Published"],
+							snippet: self.airtableResponse[i].fields.Excerpt,
+							image: self.airtableResponse[i].fields.Image[0].url,
+							slug: self.airtableResponse[i].fields.slug
+						}
+						projectList.push(project)
+					}
+				}
+				return projectList
+			}
+		}
 	};
-
 </script>

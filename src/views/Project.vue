@@ -31,18 +31,10 @@
 	</div>
 </template>
 
-<style type="text/css">
-
-</style>
-
 <script>
 	import ProjectsService from '@/services/ProjectsService'
-	import PostCard from '@/components/PostCard'
 	export default {
 		name: "project",
-		components: {
-			PostCard
-		},
 		data() {
 			return{
 				airtableResponse: []
@@ -53,35 +45,29 @@
 			console.log("here 1")
 			async function getProject() {
 				try{
-			  		const response = await ProjectsService.getProject(self.$route.params.slug)
-			  		console.log(response)
-			  		self.airtableResponse = response.data.records
+					const response = await ProjectsService.getProject(self.$route.params.slug)
+					console.log(response)
+					self.airtableResponse = response.data.records
 
-			  	}catch(err){
-			  		console.log(err)
-			  	}
-			  	}
-			  	getProject()
-			  	
-	 	},
-	 	computed: {
-	 		project(){
-	 			let self = this
-	 				if (self.airtableResponse[0]){
-		 				let thisProject = {
-		 					title: self.airtableResponse[0].fields.Title,
-		 					date: self.airtableResponse[0].fields["Date Published"],
-		 					isPublished: self.airtableResponse[0].fields.Published,
-		 					snippet: self.airtableResponse[0].fields.Excerpt,
-		 					images: self.airtableResponse[0].fields.Image,
-		 					slug: self.airtableResponse[0].fields.Slug,
-		 					body: self.airtableResponse[0].fields.Body
-		 				}
-		 				return thisProject
-	 			}
-	 			
-	 		}
-	 	}
+				}catch(err){
+					console.log(err)
+				}
+			}
+			getProject()		  	
+		},
+		computed: {
+			project(){
+				let self = this
+				if (self.airtableResponse[0]){
+					let thisProject = {
+						title: self.airtableResponse[0].fields.Title,
+						snippet: self.airtableResponse[0].fields.Excerpt,
+						images: self.airtableResponse[0].fields.Image,
+						body: self.airtableResponse[0].fields.Body
+					}
+					return thisProject
+				}
+			}
+		}
 	};
-
 </script>

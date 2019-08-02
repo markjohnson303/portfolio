@@ -4,12 +4,12 @@ const Axios = axios.create({
   baseURL: "https://api.airtable.com/v0/appBNGFU3NQ5tnUMT/Projects"
 });
 
-if(process.env.VUE_APP_AIRTABLEKEY){
-	console.log("running with vue env")
-	Axios.defaults.headers.common = {'Authorization': `Bearer ` + process.env.VUE_APP_AIRTABLEKEY}
-} else {
-	Axios.defaults.headers.common = {'Authorization': `Bearer ` + process.env.AIRTABLEKEY}
-}
+const airtableAPIKey = process.env.AIRTABLEKEY || process.env.VUE_APP_AIRTABLEKEY
+
+console.log(airtableAPIKey)
+
+Axios.defaults.headers.common = {'Authorization': `Bearer ` + airtableAPIKey}
+
 
 export default{
   getProjects() {

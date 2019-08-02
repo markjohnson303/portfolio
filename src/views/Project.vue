@@ -42,7 +42,6 @@
 		},
 		mounted: function () {
 			let self = this
-			console.log("here 1")
 			async function getProject() {
 				try{
 					const response = await ProjectsService.getProject(self.$route.params.slug)

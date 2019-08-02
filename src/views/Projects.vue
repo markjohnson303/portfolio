@@ -40,7 +40,6 @@
 		},
 		mounted: function () {
 			let self = this
-			console.log("here 1")
 			async function getProjects() {
 				try{
 					const response = await ProjectsService.getProjects()

@@ -4,7 +4,11 @@ const Axios = axios.create({
   baseURL: "https://api.airtable.com/v0/appBNGFU3NQ5tnUMT/Projects"
 });
 
-Axios.defaults.headers.common = {'Authorization': `Bearer ` + process.env.VUE_APP_AIRTABLEKEY || AIRTABLEKEY}
+if(process.env.VUE_APP_AIRTABLEKEY){
+	Axios.defaults.headers.common = {'Authorization': `Bearer ` + process.env.VUE_APP_AIRTABLEKEY}
+} else {
+	Axios.defaults.headers.common = {'Authorization': `Bearer ` + process.env.AIRTABLEKEY}
+}
 
 export default{
   getProjects() {

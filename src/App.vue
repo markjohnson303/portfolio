@@ -80,7 +80,7 @@ $primary: #72b5db
 
 .hero-home
   @extend .hero
-  background-image: url('./assets/cloud-background.jpg')
+  background-image: url('./assets/cloud-background.png')
   background-size: cover
 
 
